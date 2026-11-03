@@ -84,7 +84,7 @@ Fabric: Cotton Blend - Soft & Comfortable
 <button class="buyBtn now" onclick="openOrder()">Buy Now @ ₹325 💖</button>
 </div>
 
-<div id="orderModal"><div id="orderBox"><h3 style="text-align:center;color:#ff2e78">💖 Order - TradeZone Night Suit</h3><p id="pName" style="text-align:center;font-weight:bold;margin:12px 0;background:#fff0f5;padding:10px;border-radius:14px;font-size:13px">TradeZone Night Suit - Rs 325</p>
+<div id="orderModal"><div id="orderBox"><h3 style="text-align:center;color:#ff2e78">💖 Order - tradezone-night-suit</h3><p id="pName" style="text-align:center;font-weight:bold;margin:12px 0;background:#fff0f5;padding:10px;border-radius:14px;font-size:13px">tradezone-night-suit - Rs 325</p>
 <input class="orderInput" id="cName" placeholder="Aapka Naam *"><input class="orderInput" id="cMobile" placeholder="Mobile Number *"><textarea class="orderInput" id="cAddr" placeholder="Pura Address *"></textarea><input class="orderInput" id="cPin" placeholder="Pincode *"><select class="orderInput" id="payMethod"><option value="upi">📱 UPI - 6260501993@ybl</option><option value="cod">💵 COD - Mhow Free</option></select><button class="orderBtn" onclick="confirmOrder()">✅ Confirm - WhatsApp + Pay</button><button class="orderBtn" style="background:#f5f5f5;color:#333" onclick="closeModal()">Cancel</button></div></div>
 
 <script>
@@ -104,13 +104,13 @@ function selectSize(el,size){
 function openOrder(){
  if(!selSize){alert('📏 Please Size Select Karo - M L XL XXL!');return}
  document.getElementById('orderModal').style.display='flex';
- document.getElementById('pName').innerText=`TradeZone Night Suit - ${selColour} - Size ${selSize} - Rs 325`;
+ document.getElementById('pName').innerText=`tradezone-night-suit - ${selColour} - Size ${selSize} - Rs 325`;
 }
 function closeModal(){document.getElementById('orderModal').style.display='none'}
 function confirmOrder(){
  let name=document.getElementById('cName').value.trim();let mob=document.getElementById('cMobile').value.trim();let addr=document.getElementById('cAddr').value.trim();let pin=document.getElementById('cPin').value.trim();let pay=document.getElementById('payMethod').value;
  if(!name||!mob||!addr||!pin){alert('Sab details bharo!');return}
- let msg=`💖 NEW VOYAGE ORDER%0A---------------------------%0A🏷️ Product: TradeZone Night Suit%0A🎨 Colour: ${selColour}%0A📏 Size: ${selSize}%0A💰 Price: Rs 325%0A💳 Payment: ${pay}%0A---------------------------%0A👤 Customer: ${name}%0A📱 Mobile: ${mob}%0A🏠 Address: ${addr}%0A📍 Pincode: ${pin}%0A---------------------------%0A🚚 Sold by: Voyage Store Mhow MP%0A🔒 UPI: 6260501993@ybl`;
+ let msg=`💖 NEW VOYAGE ORDER%0A---------------------------%0A🏷️ Product: tradezone-night-suit%0A🎨 Colour: ${selColour}%0A📏 Size: ${selSize}%0A💰 Price: Rs 325%0A💳 Payment: ${pay}%0A---------------------------%0A👤 Customer: ${name}%0A📱 Mobile: ${mob}%0A🏠 Address: ${addr}%0A📍 Pincode: ${pin}%0A---------------------------%0A🚚 Sold by: Voyage Store Mhow MP%0A🔒 UPI: 6260501993@ybl`;
  window.open(`https://wa.me/916260501993?text=${msg}`,'_blank');
  if(pay=='upi'){setTimeout(()=>{window.location.href=`upi://pay?pa=6260501993@ybl&pn=Voyage Store&am=325&cu=INR&tn=TradeZone Night Suit ${selColour} ${selSize}`},800)}
  closeModal();
