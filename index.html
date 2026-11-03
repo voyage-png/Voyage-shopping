@@ -9,73 +9,133 @@
 header{background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(255,105,180,0.1)}
 .logo{font-weight:800;font-size:22px;background:linear-gradient(90deg,#ff2e78,#8a2be2);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .admin{background:linear-gradient(90deg,#ff2e78,#ff8a00);color:white;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:bold;text-decoration:none}
-.searchWrap{padding:14px 16px;background:white}.searchBar{background:#f8f0f3;border-radius:30px;display:flex;align-items:center;padding:12px 16px;box-shadow:inset 0 2px 10px rgba(0,0,0,0.04)}.searchBar input{border:none;outline:none;width:100%;background:transparent;font-size:14px;margin-left:8px}
-.hero{margin:16px;border-radius:28px;background:linear-gradient(135deg,#ff2e78 0%,#8a2be2 50%,#ff8a00 100%);color:white;padding:20px;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::after{content:'✨';position:absolute;right:20px;top:10px;font-size:40px;opacity:0.3}
+.searchWrap{padding:14px 16px;background:white;position:sticky;top:52px;z-index:90}.searchBar{background:#f8f0f3;border-radius:30px;display:flex;align-items:center;padding:12px 16px;box-shadow:inset 0 2px 10px rgba(0,0,0,0.04)}.searchBar input{border:none;outline:none;width:100%;background:transparent;font-size:14px;margin-left:8px}
+.hero{margin:16px;border-radius:28px;background:linear-gradient(135deg,#ff2e78 0%,#8a2be2 50%,#ff8a00 100%);color:white;padding:20px;display:flex;align-items:center}
 .hero h2{font-size:20px;line-height:24px;font-weight:700}.hero p{font-size:12px;margin-top:6px;opacity:0.9}.hero button{background:white;color:#ff2e78;border:none;padding:8px 16px;border-radius:20px;font-weight:700;margin-top:10px;font-size:12px}
-.catTitle{padding:18px 16px 8px 16px;font-size:17px;font-weight:700;color:#333;display:flex;justify-content:space-between}
-.grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 16px 16px 16px;background:transparent}
+.catTitle{padding:18px 16px 8px 16px;font-size:17px;font-weight:700;color:#333;display:flex;justify-content:space-between;align-items:center}
+.chipBar{display:flex;gap:10px;overflow-x:auto;padding:8px 16px;white-space:nowrap;background:white;position:sticky;top:106px;z-index:80;box-shadow:0 4px 10px rgba(0,0,0,0.03)}.chipBar::-webkit-scrollbar{display:none}
+.chipBar button{padding:9px 18px;border-radius:20px;border:1px solid #ffd1dc;background:white;font-size:13px;font-weight:600;flex-shrink:0;cursor:pointer}.chipBar button.active{background:linear-gradient(90deg,#ff2e78,#8a2be2);color:white;border:none;box-shadow:0 6px 15px rgba(255,46,120,0.3)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:16px;background:white;margin:0 0 10px 0;border-radius:0}
+.grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 16px 16px 16px;background:white}
 .catItem{text-align:center;cursor:pointer;transition:0.3s}.catItem:hover{transform:translateY(-4px)}
 .catItem .imgBox{width:100%;aspect-ratio:1;border-radius:22px;background:linear-gradient(135deg,#fff0f5,#ffe4ec);display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 20px rgba(255,46,120,0.12);border:2px solid white;overflow:hidden}
 .catItem .imgBox img{width:100%;height:100%;object-fit:cover}
 .catItem p{margin-top:6px;font-size:11px;font-weight:600;color:#444}
-.loved{padding:16px}.lovedGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.lovedCard{border-radius:20px;overflow:hidden;position:relative;height:140px;box-shadow:0 10px 25px rgba(0,0,0,0.1)}
+.loved{padding:16px;background:white;margin-top:10px}.lovedGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lovedCard{border-radius:20px;overflow:hidden;position:relative;height:140px;box-shadow:0 10px 25px rgba(0,0,0,0.1);cursor:pointer}
 .lovedCard img{width:100%;height:100%;object-fit:cover}.lovedCard .label{position:absolute;bottom:0;width:100%;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:white;padding:20px 8px 8px 8px;font-size:12px;font-weight:700;text-align:center}
-.chipBar{display:flex;gap:10px;overflow-x:auto;padding:0 16px 12px 16px;white-space:nowrap}.chipBar::-webkit-scrollbar{display:none}
-.chipBar button{padding:8px 18px;border-radius:20px;border:1px solid #ffd1dc;background:white;font-size:13px;font-weight:600;flex-shrink:0;cursor:pointer;transition:0.2s}.chipBar button.active{background:linear-gradient(90deg,#ff2e78,#8a2be2);color:white;border:none;box-shadow:0 6px 15px rgba(255,46,120,0.3)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:16px}
-.card{background:white;border-radius:20px;padding:10px;box-shadow:0 8px 25px rgba(255,105,180,0.08);border:1px solid #fff0f5;position:relative;overflow:hidden}
+.card{background:white;border-radius:20px;padding:10px;box-shadow:0 8px 25px rgba(255,105,180,0.08);border:1px solid #fff0f5;position:relative}
 .card img{width:100%;height:170px;object-fit:cover;border-radius:14px}
 .badge{position:absolute;top:14px;left:14px;background:#ff2e78;color:white;font-size:9px;padding:4px 8px;border-radius:10px;font-weight:700}
-.heart{position:absolute;top:14px;right:14px;background:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
 .pr{font-weight:800;color:#ff2e78;font-size:16px}.op{color:#bbb;text-decoration:line-through;font-size:11px;margin-left:5px}
-.buy{background:linear-gradient(90deg,#ff2e78,#ff8a00);color:white;padding:9px;border-radius:20px;border:none;width:100%;margin-top:8px;font-weight:700;cursor:pointer;box-shadow:0 6px 15px rgba(255,46,120,0.25)}
-.payBox{margin:16px;background:white;border-radius:20px;padding:16px;box-shadow:0 8px 25px rgba(0,0,0,0.05)}
-.seo{margin:16px;background:white;border-radius:20px;padding:16px;font-size:12px;line-height:18px;color:#666;box-shadow:0 4px 15px rgba(0,0,0,0.03)}
+.buy{background:linear-gradient(90deg,#ff2e78,#ff8a00);color:white;padding:9px;border-radius:20px;border:none;width:100%;margin-top:8px;font-weight:700;cursor:pointer}
 #orderModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);z-index:999;justify-content:center;align-items:center;padding:20px}
-#orderBox{background:white;width:100%;max-width:380px;border-radius:28px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+#orderBox{background:white;width:100%;max-width:380px;border-radius:28px;padding:22px}
 .orderInput{width:100%;padding:12px;margin:6px 0;border-radius:14px;border:1.5px solid #ffe4ec;background:#fff8fa;outline:none}
 .orderBtn{width:100%;padding:12px;background:linear-gradient(90deg,#ff2e78,#8a2be2);color:white;border:none;border-radius:20px;font-weight:700;margin-top:8px;cursor:pointer}
 </style></head><body>
 <header><div class="logo">VOYAGE.COM</div><a class="admin" href="dashboard.html">📊 DASHBOARD</a></header>
-<div class="searchWrap"><div class="searchBar">🔍 <input id="s" placeholder="Search Kurtis, Sarees, Duvet Bag, Rose Candle..." onkeyup="render()"> 💖</div></div>
+<div class="searchWrap"><div class="searchBar">🔍 <input id="s" placeholder="Search Kurtis, Sarees, Duvet Bag, Rose Candle, Jeans..." onkeyup="render()" onfocus="showProducts()"> 💖</div></div>
 
-<div class="hero"><div style="width:65%"><div style="background:rgba(255,255,255,0.25);display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700">✨ NEW COLLECTION</div><h2>Beautiful Fashion<br>Starts Here</h2><p>Kurtis • Sarees • Jewellery<br>From ₹99 Only - MP Free Delivery</p><button onclick="setF('ethnic',document.querySelector('.chipBar button'))">SHOP NOW →</button></div><div style="width:35%"><img src="https://voyage-png.github.io/Voyage-shopping/Duvet-bag.jpg" style="width:100%;border-radius:18px;box-shadow:0 15px 30px rgba(0,0,0,0.2)"></div></div>
+<div class="hero"><div style="width:65%"><div style="background:rgba(255,255,255,0.25);display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700">✨ NEW COLLECTION</div><h2>Beautiful Fashion<br>Starts Here</h2><p>Kurtis • Sarees • Jewellery<br>From ₹99 Only - MP Free Delivery</p><button onclick="showProducts()">SHOP NOW →</button></div><div style="width:35%"><img src="https://voyage-png.github.io/Voyage-shopping/Duvet-bag.jpg" style="width:100%;border-radius:18px"></div></div>
 
-<div class="catTitle"><span>✨ Explore Categories</span><span style="color:#ff2e78;font-size:12px">See All</span></div>
-<div class="grid2">
-<div class="catItem" onclick="setF('ethnic',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=200"></div><p>Kurtis</p></div>
-<div class="catItem" onclick="setF('ethnic',0)"><div class="imgBox" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2)">👗</div><p>Dress Material</p></div>
-<div class="catItem" onclick="setF('western',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=200"></div><p>Korean Store</p></div>
-<div class="catItem" onclick="setF('all',0)"><div class="imgBox" style="background:linear-gradient(135deg,#ffebee,#ffcdd2)">🔥</div><p>Top Deals</p></div>
-<div class="catItem" onclick="setF('ethnic',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1583391733956-3750e79ff55e?w=200"></div><p>Kurta Sets</p></div>
-<div class="catItem" onclick="setF('ethnic',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=200"></div><p>Sarees</p></div>
-<div class="catItem" onclick="setF('western',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=200"></div><p>Jeans</p></div>
-<div class="catItem" onclick="setF('footwear',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200"></div><p>Heels</p></div>
-<div class="catItem" onclick="setF('kitchen',0)"><div class="imgBox" style="background:linear-gradient(135deg,#fff8e1,#ffecb3)">👜</div><p>Handbags</p></div>
-<div class="catItem" onclick="setF('electronics',0)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200"></div><p>Jewellery</p></div>
-<div class="catItem" onclick="setF('electronics',0)"><div class="imgBox" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7)">⌚</div><p>Watches</p></div>
-<div class="catItem" onclick="setF('homedecor',0)"><div class="imgBox"><img src="https://voyage-png.github.io/Voyage-shopping/Rose-candle.jpg"></div><p>Candles</p></div>
-</div>
-
-<div class="catTitle"><span>💖 Shop For Loved Ones</span></div>
-<div class="loved"><div class="lovedGrid"><div class="lovedCard" onclick="setF('western',0)"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300"><div class="label">MEN • 50% OFF</div></div><div class="lovedCard" onclick="setF('western',0)"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300"><div class="label">GEN Z • TRENDING</div></div><div class="lovedCard" onclick="setF('western',0)"><img src="https://images.unsplash.com/photo-1604919512735-3a1befc7a7d8?w=300"><div class="label">KIDS • CUTE</div></div></div></div>
-
+<!-- 1. BEST SELLER HEADER AB UPAR HAI - AAPKI MAANG KE HISAB SE -->
 <div class="catTitle"><span>🔥 Best Sellers</span><span id="fName" style="color:#ff2e78;font-size:12px">All Products</span></div>
-<div class="chipBar" id="chips"><button class="active" onclick="setF('all',this)">All</button><button onclick="setF('ethnic',this)">Ethnic Wear</button><button onclick="setF('western',this)">Western</button><button onclick="setF('footwear',this)">Footwear</button><button onclick="setF('homedecor',this)">Home Decor</button><button onclick="setF('electronics',this)">Jewellery</button></div>
+<div class="chipBar" id="chips">
+<button class="active" onclick="setF('all',this)">All</button>
+<button onclick="setF('ethnic',this)">Ethnic Wear</button>
+<button onclick="setF('western',this)">Western</button>
+<button onclick="setF('footwear',this)">Footwear</button>
+<button onclick="setF('homedecor',this)">Home Decor</button>
+<button onclick="setF('electronics',this)">Jewellery</button>
+<button onclick="setF('kitchen',this)">Kitchen</button>
+</div>
 <div class="grid" id="g"></div>
 
-<div class="payBox"><h3 style="text-align:center;color:#ff2e78;font-size:14px">💳 Secure Payments - Sabhi Uplabdh</h3><div style="display:flex;gap:8px;margin-top:10px"><div style="flex:1;background:#fff0f5;padding:8px;border-radius:12px;text-align:center;font-size:11px">📱<br><b>UPI</b><br>6260501993@ybl</div><div style="flex:1;background:#f3e5f5;padding:8px;border-radius:12px;text-align:center;font-size:11px">🏦<br><b>Bank</b><br>Transfer</div><div style="flex:1;background:#e8f5e9;padding:8px;border-radius:12px;text-align:center;font-size:11px">💵<br><b>COD</b><br>Mhow/MP</div></div></div>
+<!-- 2. EXPLORE CATEGORIES AB NICHE HAI -->
+<div class="catTitle"><span>✨ Explore Categories</span><span style="color:#ff2e78;font-size:12px">See All</span></div>
+<div class="grid2">
+<div class="catItem" onclick="setF('ethnic',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=200"></div><p>Kurtis</p></div>
+<div class="catItem" onclick="setF('ethnic',null)"><div class="imgBox" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2)">👗</div><p>Dress Material</p></div>
+<div class="catItem" onclick="setF('western',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=200"></div><p>Korean Store</p></div>
+<div class="catItem" onclick="setF('all',null)"><div class="imgBox" style="background:linear-gradient(135deg,#ffebee,#ffcdd2)">🔥</div><p>Top Deals</p></div>
+<div class="catItem" onclick="setF('ethnic',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1583391733956-3750e79ff55e?w=200"></div><p>Kurta Sets</p></div>
+<div class="catItem" onclick="setF('ethnic',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=200"></div><p>Sarees</p></div>
+<div class="catItem" onclick="setF('western',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=200"></div><p>Jeans</p></div>
+<div class="catItem" onclick="setF('footwear',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200"></div><p>Heels</p></div>
+<div class="catItem" onclick="setF('kitchen',null)"><div class="imgBox" style="background:linear-gradient(135deg,#fff8e1,#ffecb3)">👜</div><p>Handbags</p></div>
+<div class="catItem" onclick="setF('electronics',null)"><div class="imgBox"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200"></div><p>Jewellery</p></div>
+<div class="catItem" onclick="setF('electronics',null)"><div class="imgBox" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7)">⌚</div><p>Watches</p></div>
+<div class="catItem" onclick="setF('homedecor',null)"><div class="imgBox"><img src="https://voyage-png.github.io/Voyage-shopping/Rose-candle.jpg"></div><p>Candles</p></div>
+</div>
 
-<div class="seo"><h2 style="color:#ff2e78;font-size:14px">VOYAGE.COM - MP's Most Beautiful Store</h2><p style="margin-top:6px"><b>voyage.png | voyage.com | voyage.in</b> MP ka sabse sundar store hai. Duvet Bag Rs 325, Rose Candle Rs 149, Saree Suit sab Free Delivery. Kurtis, Sarees, Jeans, Jewellery, Heels sab kuch ek jagah!</p></div>
-<div style="text-align:center;padding:20px;background:linear-gradient(90deg,#ff2e78,#8a2be2);color:white;border-radius:28px 28px 0 0;margin-top:10px"><p>✨ 100% Secure | Fast Delivery MP Se ✨</p><p style="font-size:11px;margin-top:4px;opacity:0.8">voyage.png | voyage.com | voyage.in | UPI: 6260501993@ybl</p><a href="dashboard.html" style="color:#ffe11b;text-decoration:none;font-size:12px;display:block;margin-top:8px">🔐 Admin Dashboard</a></div>
+<div class="loved"><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="font-weight:700">💖 Shop For Loved Ones</span></div><div class="lovedGrid"><div class="lovedCard" onclick="setF('western',null)"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300"><div class="label">MEN • 50% OFF</div></div><div class="lovedCard" onclick="setF('western',null)"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300"><div class="label">GEN Z • TRENDING</div></div><div class="lovedCard" onclick="setF('western',null)"><img src="https://images.unsplash.com/photo-1604919512735-3a1befc7a7d8?w=300"><div class="label">KIDS • CUTE</div></div></div></div>
 
-<div id="orderModal"><div id="orderBox"><h3 style="text-align:center;color:#ff2e78">💖 Order Confirm Karo</h3><p id="pName" style="text-align:center;font-weight:bold;margin:12px 0;background:#fff0f5;padding:10px;border-radius:14px;font-size:13px"></p><input class="orderInput" id="cName" placeholder="Aapka Naam *"><input class="orderInput" id="cMobile" placeholder="Mobile Number *"><textarea class="orderInput" id="cAddr" placeholder="Pura Address *"></textarea><input class="orderInput" id="cPin" placeholder="Pincode *"><select class="orderInput" id="payMethod"><option value="upi">📱 UPI - 6260501993@ybl</option><option value="bank">🏦 Bank Transfer</option><option value="cod">💵 Cash on Delivery</option></select><button class="orderBtn" onclick="confirmOrder()">✅ Confirm - WhatsApp + Pay</button><button class="orderBtn" style="background:#f5f5f5;color:#333" onclick="closeModal()">Cancel</button></div></div>
+<div style="text-align:center;padding:20px;background:linear-gradient(90deg,#ff2e78,#8a2be2);color:white;border-radius:28px 28px 0 0;margin-top:10px"><p>✨ 100% Secure | Fast Delivery MP Se ✨</p><p style="font-size:11px;margin-top:4px;opacity:0.8">voyage.png | voyage.com | voyage.in | UPI: 6260501993@ybl</p></div>
 
-<script>let f='all';let curProd=null;let P=[{c:"homedecor",n:"Duvet Cover Storage Bag - 3 Pcs Set (Black+Red)",p:325,op:699,i:"Duvet-bag.jpg",b:"BEST SELLER"},{c:"homedecor",n:"Beautiful Rose-Shaped Candles (10 Pcs) - Diwali",p:149,op:299,i:"Rose-candle.jpg",b:"60% OFF"},{c:"ethnic",n:"Red Banarasi Suit - Wedding Special",p:799,op:1999,i:"https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=500",b:"TRENDING"},{c:"ethnic",n:"Pink Anarkali Gown - Party Wear",p:999,op:2499,i:"https://images.unsplash.com/photo-1583391733956-3750e79ff55e?w=500",b:"NEW"},{c:"western",n:"Stylish Western Dress - Korean Style",p:599,op:1299,i:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",b:"50% OFF"},{c:"footwear",n:"Designer Bridal Heels",p:449,op:999,i:"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500",b:"HOT"},{c:"electronics",n:"Gold Plated Jewellery Set",p:299,op:999,i:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500",b:"UNDER 299"},{c:"western",n:"High Waist Jeans - Women",p:499,op:999,i:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500",b:"BEST SELLER"}];
-function setF(v,btn){f=v;document.getElementById('fName').innerText=v=='all'?'All Products':v;if(btn&&btn.tagName=='BUTTON'){document.querySelectorAll('.chipBar button').forEach(x=>x.classList.remove('active'));btn.classList.add('active')}render();window.scrollTo({top:600,behavior:'smooth'})}
-function render(){let q=document.getElementById('s').value.toLowerCase();let g=document.getElementById('g');g.innerHTML='';P.forEach((x,idx)=>{if((f=='all'||f==x.c)&&x.n.toLowerCase().includes(q)){g.innerHTML+=`<div class="card"><div class="badge">${x.b}</div><div class="heart">🤍</div><img src="${x.i}"><h4 style="margin:8px 0;font-size:13px;height:34px;overflow:hidden;text-align:left">${x.n}</h4><div style="display:flex;align-items:center"><span class="pr">₹${x.p}</span><span class="op">₹${x.op}</span><span style="margin-left:auto;color:#00c853;font-size:10px;font-weight:700">✔ Free Delivery</span></div><button class="buy" onclick="openOrder(${idx})">Buy Now 💖</button></div>`}})}
+<div id="orderModal"><div id="orderBox"><h3 style="text-align:center;color:#ff2e78">💖 Order Confirm Karo</h3><p id="pName" style="text-align:center;font-weight:bold;margin:12px 0;background:#fff0f5;padding:10px;border-radius:14px;font-size:13px"></p><input class="orderInput" id="cName" placeholder="Aapka Naam *"><input class="orderInput" id="cMobile" placeholder="Mobile Number *"><textarea class="orderInput" id="cAddr" placeholder="Pura Address *"></textarea><input class="orderInput" id="cPin" placeholder="Pincode *"><select class="orderInput" id="payMethod"><option value="upi">📱 UPI - 6260501993@ybl</option><option value="cod">💵 COD</option></select><button class="orderBtn" onclick="confirmOrder()">✅ Confirm - WhatsApp + Pay</button><button class="orderBtn" style="background:#f5f5f5;color:#333" onclick="closeModal()">Cancel</button></div></div>
+
+<script>
+let f='all';let curProd=null;
+let P=[
+{c:"homedecor",n:"Duvet Cover Storage Bag - 3 Pcs Set (Black+Red) Large Blanket Organizer",p:325,op:699,i:"Duvet-bag.jpg",b:"BEST SELLER"},
+{c:"homedecor",n:"Beautiful Rose-Shaped Candles (10 Pcs) - Diwali Special",p:149,op:299,i:"Rose-candle.jpg",b:"60% OFF"},
+{c:"ethnic",n:"Red Banarasi Suit - Wedding Special Saree",p:799,op:1999,i:"https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=500",b:"TRENDING"},
+{c:"ethnic",n:"Pink Anarkali Gown - Kurta Sets",p:999,op:2499,i:"https://images.unsplash.com/photo-1583391733956-3750e79ff55e?w=500",b:"NEW"},
+{c:"ethnic",n:"Designer Saree - Ethnic Wear",p:899,op:1999,i:"https://images.unsplash.com/photo-1610035905869-d6e0a2d71c3f?w=500",b:"BEST SELLER"},
+{c:"ethnic",n:"Kurtis - Dress Material - Cotton",p:499,op:999,i:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200",b:"50% OFF"},
+{c:"western",n:"Stylish Western Dress - Korean Store",p:599,op:1299,i:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",b:"HOT"},
+{c:"western",n:"High Waist Jeans - Women - Jeans Trouser",p:499,op:999,i:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500",b:"TRENDING"},
+{c:"western",n:"Top 50 Deals - Viral Finds - Trends",p:399,op:899,i:"https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200",b:"VIRAL"},
+{c:"footwear",n:"Designer Heels - Bridal - Women Heels",p:449,op:999,i:"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500",b:"HOT"},
+{c:"footwear",n:"Kids Sandal - Stylish Footwear",p:299,op:599,i:"https://images.unsplash.com/photo-1560343090-f4df9e18b80e?w=200",b:"NEW"},
+{c:"electronics",n:"Gold Plated Jewellery Set - Jewellery Watches",p:299,op:999,i:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500",b:"UNDER 299"},
+{c:"kitchen",n:"Designer Handbags - Bra Panty Set",p:399,op:899,i:"https://images.unsplash.com/photo-1591561954557-26941169b49e?w=200",b:"60% OFF"},
+{c:"homedecor",n:"Dhanteras Special - Festival Decor",p:199,op:499,i:"https://via.placeholder.com/200/FFD700/000?text=DHANTERAS",b:"DHANTERAS"},
+{c:"western",n:"Men Collection - Gen Z - Kids Fashion",p:599,op:1299,i:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500",b:"MEN"}
+];
+
+function showProducts(){document.getElementById('g').scrollIntoView({behavior:'smooth',block:'start'})}
+
+function setF(v,btn){
+ f=v;
+ document.getElementById('fName').innerText=v=='all'?'All Products':v.toUpperCase();
+ if(btn && btn.tagName=='BUTTON'){
+  document.querySelectorAll('.chipBar button').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+ }
+ render();
+ showProducts();
+}
+
+// SEARCH - AB AAPKE SARE PRODUCTS SEARCH HONGE
+function render(){
+ let q=document.getElementById('s').value.toLowerCase().trim();
+ let g=document.getElementById('g');
+ g.innerHTML='';
+ let found=0;
+ P.forEach((x,idx)=>{
+  let matchCat = (f=='all'||f==x.c);
+  let matchSearch = x.n.toLowerCase().includes(q);
+  if(matchCat && matchSearch){
+   found++;
+   g.innerHTML+=`<div class="card"><div class="badge">${x.b}</div><img src="${x.i}"><h4 style="margin:8px 0;font-size:13px;height:34px;overflow:hidden;text-align:left">${x.n}</h4><div style="display:flex;align-items:center"><span class="pr">₹${x.p}</span><span class="op">₹${x.op}</span><span style="margin-left:auto;color:#00c853;font-size:10px;font-weight:700">✔ Free</span></div><button class="buy" onclick="openOrder(${idx})">Buy Now 💖</button></div>`;
+  }
+ });
+ if(found==0){
+  g.innerHTML=`<div style="grid-column:span 2;text-align:center;padding:20px;color:#999">😔 "${q}" nahi mila<br><span style="font-size:12px">Dusra naam search karo - jaise Kurtis, Sarees, Jeans</span></div>`;
+ }
+}
+
 function openOrder(idx){curProd=P[idx];document.getElementById('pName').innerText=curProd.n+" - ₹"+curProd.p;document.getElementById('orderModal').style.display='flex'}
 function closeModal(){document.getElementById('orderModal').style.display='none'}
-function confirmOrder(){let name=document.getElementById('cName').value.trim();let mob=document.getElementById('cMobile').value.trim();let addr=document.getElementById('cAddr').value.trim();let pin=document.getElementById('cPin').value.trim();let pay=document.getElementById('payMethod').value;if(!name||!mob||!addr||!pin){alert("Sab details bharo!");return}let date=new Date().toLocaleString('en-IN');let orders=JSON.parse(localStorage.getItem('voyage_orders')||'[]');orders.push({date,product:curProd.n,price:curProd.p,name,mobile:mob,address:addr,pincode:pin,payment:pay});localStorage.setItem('voyage_orders',JSON
+function confirmOrder(){
+ let name=document.getElementById('cName').value.trim();let mob=document.getElementById('cMobile').value.trim();let addr=document.getElementById('cAddr').value.trim();let pin=document.getElementById('cPin').value.trim();let pay=document.getElementById('payMethod').value;
+ if(!name||!mob||!addr||!pin){alert("Sab details bharo!");return}
+ let msg=`💖 NEW ORDER - VOYAGE.COM%0AProduct: ${curProd.n}%0APrice: Rs ${curProd.p}%0ACustomer: ${name}%0AMobile: ${mob}%0AAddress: ${addr}%0APin: ${pin}%0APay: ${pay}`;
+ window.open(`https://wa.me/916260501993?text=${msg}`,'_blank');
+ if(pay=='upi'){setTimeout(()=>{window.location.href=`upi://pay?pa=6260501993@ybl&pn=Voyage Store&am=${curProd.p}&cu=INR`},800)}
+ closeModal();
+}
+render();
+</script></body></html>
